@@ -1,6 +1,6 @@
 Ke spuštění aplikace (backend) použijte příkaz (z této složky - rootu projektu):
 
-docker run -p 8080:8080 wallet
+docker run -p 8080:8080 wallet-app
 
 Ke spuštění frontendu použijte příkaz (ze složky src/frontend ):
 
