@@ -1,0 +1,273 @@
+/* Reset + Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+  padding: 2rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+  border-color: #444;
+}
+
+body.dark-mode button {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode .error-text {
+  color: #ff8888;
+}
+
+/* App Layout */
+#app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Dark Mode Toggle */
+.toggle-container {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+#dark-mode-toggle {
+  padding: 6px 12px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+body.dark-mode #dark-mode-toggle {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Auth Form Layout */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.auth-container section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: background-color 0.3s;
+}
+
+body.dark-mode .auth-container section {
+  background-color: #1e1e1e;
+}
+
+/* Inputs and Buttons */
+input,
+select,
+button {
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+input:focus,
+select:focus,
+button:focus {
+  outline: none;
+  border-color: #888;
+}
+
+button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Error Text */
+.error-text {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  min-height: 1.2rem;
+}
+
+/* Wallet Section */
+#wallet-section {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+#wallets-list {
+  margin-top: 20px;
+}
+
+#wallets-list p {
+  margin: 8px 0;
+  padding: 6px;
+  background-color: #eee;
+  border-radius: 6px;
+}
+
+body.dark-mode #wallets-list p {
+  background-color: #2a2a2a;
+}
+
+/* Dashboard Section Styling */
+.dashboard-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  transition: background-color 0.3s;
+}
+
+body.dark-mode .dashboard-section {
+  background-color: #1e1e1e;
+}
+
+.dashboard-section h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+body.dark-mode .dashboard-section h2 {
+  color: #e0e0e0;
+}
+
+.dashboard-section input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.dashboard-section button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.dashboard-section img {
+  display: block;
+  margin: 15px auto 0 auto;
+  max-width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: #fafafa;
+}
+
+body.dark-mode .dashboard-section img {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+/* Add this to your style.css */
+.nav-bar {
+  margin: 20px;
+  text-align: center;
+}
+
+.nav-link {
+  display: inline-block;
+  font-weight: bold;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #0056b3;
+}
+
+body.dark-mode .nav-link {
+  background-color: #444;
+}
+
+body.dark-mode .nav-link:hover {
+  background-color: #666;
+}
+
+.wallet-entry {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.wallet-entry .history-section {
+  margin-top: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+body.dark-mode .wallet-entry {
+  background-color: #1a1a1a;
+  border-color: #333;
+}
+
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+.transaction-table th,
+.transaction-table td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+body.dark-mode .transaction-table th,
+body.dark-mode .transaction-table td {
+  border-color: #444;
+  background-color: #2b2b2b;
+  color: #e0e0e0;
+}

@@ -1,0 +1,47 @@
+# === OS Files ===
+.DS_Store
+Thumbs.db
+
+# === Java Backend ===
+/src/main/backend/target/
+/src/main/backend/build/
+/src/main/backend/.mvn/
+*.log
+*.class
+*.jar
+*.war
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# JWT / Secrets
+*.key
+*.pem
+.env
+token.txt
+
+# === Vite Frontend ===
+/src/main/frontend/node_modules/
+/src/main/frontend/dist/
+*.tsbuildinfo
+
+# === IDEs ===
+
+## IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+## VS Code
+.vscode/
+
+# === H2 Database ===
+*.db
+*.h2.db
+
+# === NetBeans / Eclipse (optional)
+nbproject/
+.settings/
+.classpath
+.project

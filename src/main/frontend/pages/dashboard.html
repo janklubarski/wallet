@@ -1,0 +1,85 @@
+<!-- frontend/pages/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Wallet Dashboard</title>
+    <link rel="stylesheet" href="../src/style.css" />
+</head>
+<body>
+<div class="toggle-container">
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+</div>
+
+<nav class="nav-bar">
+    <a href="/index.html" class="nav-link">🏠 Back to Home</a>
+</nav>
+
+<div id="app">
+    <h1>Welcome to Your Wallet</h1>
+
+    <!-- Wallet display -->
+    <div id="wallets-section">
+        <div id="wallets-list"></div>
+    </div>
+
+    <!-- Create Wallet -->
+    <div id="create-wallet-section" class="dashboard-section">
+        <h2>Create Wallet</h2>
+        <input type="text" id="wallet-name" placeholder="Wallet Name" />
+        <select id="create-currency">
+            <option value="EUR">EUR</option>
+            <option value="CZK">CZK</option>
+        </select>
+        <button id="create-wallet-btn">Create Wallet</button>
+        <p class="error-text" id="wallet-error"></p>
+    </div>
+
+    <!-- Other wallet operations (hidden if no wallets) -->
+    <div id="wallet-actions" style="display: none;">
+        <!-- Load Funds -->
+        <div class="dashboard-section">
+            <h2>Load Funds</h2>
+            <input type="number" id="funds-amount" placeholder="Amount" />
+            <select id="funds-wallet-select"></select>
+            <input type="text" id="funds-symbol" placeholder="Variable Symbol (optional)" />
+            <input type="text" id="funds-description" placeholder="Description (optional)" />
+            <button id="load-funds-btn">Load Funds</button>
+            <p class="error-text" id="funds-error"></p>
+<!--            <img id="funds-qr" style="display: none;" />-->
+            <div id="funds-confirm"></div>
+        </div>
+
+        <!-- Withdraw -->
+        <div class="dashboard-section">
+            <h2>Withdraw Funds</h2>
+            <input type="number" id="withdraw-amount" placeholder="Amount" />
+            <input type="text" id="bank-account" placeholder="Bank Account Number" />
+            <input type="text" id="withdraw-symbol" placeholder="Variable Symbol (optional)" />
+            <input type="text" id="withdraw-description" placeholder="Description (optional)" />
+            <select id="withdraw-wallet-select"></select>
+            <button id="withdraw-btn">Withdraw</button>
+            <p class="error-text" id="withdraw-error"></p>
+<!--            <img id="withdraw-qr" style="display: none;" />-->
+            <div id="withdraw-confirm"></div>
+        </div>
+
+        <!-- Transfer -->
+        <div class="dashboard-section">
+            <h2>Transfer to Another Wallet</h2>
+            <input type="number" id="transfer-amount" placeholder="Amount" />
+            <input type="text" id="receiver-wallet-id" placeholder="Receiver Wallet ID" />
+            <input type="text" id="transfer-symbol" placeholder="Variable Symbol (optional)" />
+            <input type="text" id="transfer-description" placeholder="Description (optional)" />
+            <select id="transfer-wallet-select"></select>
+            <button id="transfer-btn">Transfer</button>
+            <p class="error-text" id="transfer-error"></p>
+<!--            <img id="transfer-qr" style="display: none;" />-->
+            <div id="transfer-confirm"></div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

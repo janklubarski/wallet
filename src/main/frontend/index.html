@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wallet App</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+<div class="toggle-container">
+  <button id="dark-mode-toggle">Toggle Dark Mode</button>
+</div>
+
+<div id="app">
+  <h1>Welcome to the Wallet App</h1>
+
+  <div class="auth-container">
+    <section id="register-section">
+      <h2>Register</h2>
+      <input type="text" id="reg-username" placeholder="Username" />
+      <input type="password" id="reg-password" placeholder="Password" />
+      <button id="register-btn">Register</button>
+      <p id="register-error" class="error-text"></p>
+    </section>
+
+    <section id="login-section">
+      <h2>Login</h2>
+      <input type="text" id="login-username" placeholder="Username" />
+      <input type="password" id="login-password" placeholder="Password" />
+      <button id="login-btn">Login</button>
+      <p id="login-error" class="error-text"></p>
+    </section>
+  </div>
+
+  <section id="wallet-section" style="display: none;">
+    <h2>Create Wallet</h2>
+    <select id="currency-select">
+      <option value="EUR">EUR</option>
+      <option value="CZK">CZK</option>
+    </select>
+    <button id="create-wallet-btn">Create Wallet</button>
+
+    <div id="wallets-list"></div>
+  </section>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
